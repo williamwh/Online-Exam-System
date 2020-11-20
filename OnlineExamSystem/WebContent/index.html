@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+}
+form {
+	border: 3px solid #f1f1f1;
+	width: 60%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+a {
+	text-align: center;
+}
+
+button {
+  background-color: #094183;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.title {
+	text-align: center;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+button.signup {
+  text-align: center;
+  justify-content: center;
+  padding-top: 16px;
+  width: 25%;
+  background-color: #834B09;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.signup {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+		<meta charset="UTF-8">
+		<title>Login Page</title>
+	</head>
+	<body>
+		<div align="center">
+			<form action="login" method="post">
+	  			<div class="imgcontainer">
+	    			<img src="images/Uni-of-Melbourne.jpg" alt="Avatar" class="avatar">
+	  			</div>
+				<div class="title">
+					<h1>Online Examination System</h1>
+				</div>
+	  			<div class="container">
+	    			<label for="uname"><b>Username</b></label>
+	    			<input type="text" placeholder="Enter Username" name="userName" required/>
+	   				<label for="psw"><b>Password</b></label>
+	    			<input type="password" placeholder="Enter Password" name="passWord" required/>
+	    			<br><font color="red">${message}</font>
+	        		<button type="submit" value="Login">Login</button>
+	    			
+	  			</div>
+			</form>
+		</div>
+		<div class="container">
+    		<button class="signup" onClick="location.href='signup.jsp'">No account? Sign Up!</button>	
+  		</div>
+	</body>
+	<script type="text/javascript">
+ 
+	    $(document).ready(function() {
+	        $("#loginForm").validate({
+	            rules: {
+	                email: {
+	                    required: true,
+	                    email: true
+	                },
+	                password: "required",
+	            },
+	            messages: {
+	                email: {
+	                    required: "Please enter email",
+	                    email: "Please enter a valid email address"
+	                },
+	                 
+	                password: "Please enter password"
+	            }
+	        });
+	 
+	    });
+</script>
+</html>

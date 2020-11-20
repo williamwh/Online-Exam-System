@@ -1,0 +1,78 @@
+.top{
+	margin-bottom: 10px;
+}
+
+.top ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.top ul li {
+	float: left;
+}
+
+#CreateExamBtn {
+	padding: 2px;
+	background-color: #349eeb;
+	font-weight: bold;
+}
+
+
+.examButtons {
+	display: inline;
+	color: red;
+	float: right;
+}
+
+
+
+.ExamTable {
+	width: 100%;
+}
+
+.ExamsList {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.ExamList {
+	list-style-type: none;
+	color: black;
+	border: 1px solid grey;
+	margin: 0px;
+	padding: 10px;
+}
+
+.ExamList:last-child{
+	border-top: none;
+}
+
+.EachExam {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+.examDetails span{
+	border-right:1px solid grey;
+	font-size: 11px;
+	padding:4px;
+}
+
+.examDetails span:last-child{
+	border-right: none;
+}
+.EachExam li {
+	float: left;
+}
+
+.ExamTable ul li a {
+	color: black;
+	text-decoration: none;
+}
+
